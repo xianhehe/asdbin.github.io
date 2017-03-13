@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html font-size="100px">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录</title>
+		<link rel="stylesheet/less" type="text/css" href="css/login.less" />
+		<script src="js/less-1.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("input").focus(function() {
+					$(this).css("color", "#ffffff");
+					$(".btn").css("background-color", "#ff4187");
+				});
+				$(".btn").click(function(){
+					var name=$("#phone").val();
+					var passwd=$("#password").val();
+					alert(name);
+					alert(passwd);
+				});
+				$("#phone").click(function() {
+					$(".pic1").css("display", "block");
+					$(".pic2").css("display", "none");
+				});
+				$("#password").click(function() {
+					$(".pic1").css("display", "none");
+					$(".pic2").css("display", "block");
+				});
+				$(".register").click(function() {
+					window.location.href = "register.html"
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<ul>
+				<li><img src="img/back.png" /></li>
+				<li>
+					<p>登录</p>
+				</li>
+				<li class="register">
+					<p>注册</p>
+				</li>
+			</ul>
+		</header>
+		<section>
+			<input id="phone" value="" placeholder="请输入手机号" />
+			<img class="pic1" src="img/delete.png" />
+			<input id="password" value="" placeholder="请输入密码,6-8位数字和字符" />
+			<img class="pic2" src="img/delete.png" />
+			<button class="btn">登录</button>
+			<div class="server">
+				<input type="checkbox" checked="checked" /><span>同意<a href="#">《希望之星服务条款》</a>及<a href="#">《隐私政策》</a><span>
+			</div>
+		</section>
+	</body>
+	
+
+</html>

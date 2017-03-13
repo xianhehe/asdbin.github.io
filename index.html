@@ -1,3 +1,89 @@
-body
-language
-header
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+//				$("button").click(function(){
+//					$("p").hide();//隐藏所有p
+//				});
+				$(".btn1").bind("click",function(){
+					$("p").slideToggle();
+				});
+				$("input").focus(function(){
+					$("input").css("background-color","bisque");
+				});
+				$("input").blur(function(){
+					$("input").css("background-color","cornflowerblue");
+				});
+				$("input").keydown(function(){
+					$(".div1").html("Key:"+event.which);//按了哪个键或按钮
+				});
+//				图片不存在时 显示“图片未加载”
+				$(".img1").error(function(){
+					$(".img1").replaceWith("<h6>图片未加载</h6>")
+				});
+				//改变属性值
+				$(".img2").click(function(){
+					$(".img2").attr("src","img/4.jpg");
+				});
+				
+				$(".btn2").click(function(){
+					$("ol").append("<li>啦啦啦</li>");//结尾添加
+					$("ol").prepend("<h5>您好！！！</h5>");//开始添加
+				});
+				$(".btn3").click(function(){
+					$(".img3").before("B");//之后
+					$(".img3").after("A");//之前
+				});
+				$(".btn4").click(function(){
+					$(".div2").remove();//删除备选元素及子元素
+				});
+				$(".btn5").click(function(){
+					$(".div3").empty();//删除备选元素的子元素
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<h2>This</h2>
+		<p>This is an apple.</p>
+		<p>This is a banana.</p>
+		<button class="btn1">点击</button><br />
+		<input type="text" placeholder="啦啦啦"/>
+		<!--图片不存在时 显示“图片未加载”-->
+		<img class="img1" src="img/5.jpg"/> 
+		<img class="img2" src="img/3.jpg"/>
+		<img class="img3" src="img/4.jpg" />
+		<div class="div1"></div>
+		<ol>
+			<li>你好</li>
+			<li>你们好</li>
+			<li>大家好</li>
+		</ol>
+		<button class="btn2">Click</button>
+		<button class="btn3">狂点</button>
+		<div class="div2">
+			<p>啦啦啦</p>
+			<p>天气不好</p>
+			<p>下大雨啦</p>
+		</div>
+		<button class="btn4">delete</button>
+		<div class="div3">
+			<p>天气不好</p>
+			<p>哎</p>
+			<p>下雨啦</p>
+		</div>
+		<button class="btn5">delete</button>
+		<input type="" name="" id="" value=""  />
+		<ul>
+			<li style="width: 10px; height: 10px; background: #3DA3EF; border-radius: 10px; float: left;"></li>
+			<li style="width: 10px; height: 10px; background: #3DA3EF; border-radius: 10px;float: left;"></li>
+			<li style="width: 10px; height: 10px; background: #3DA3EF; border-radius: 10px;float: left;"></li>
+			<li style="width: 10px; height: 10px; background: #3DA3EF; border-radius: 10px;float: left;"></li>
+		</ul>
+	</body>
+</html>

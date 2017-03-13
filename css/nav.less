@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+#nav{
+    width:270px; 
+    background-color: #1a1818; 
+    //IE浏览器实现不透明度为80%  
+    filter: Alpha(opacity=80); 
+    background: rgba(39, 20, 20, 0.51);
+    border:1px solid #312E2E; 
+    border-radius: 10px; 
+    box-shadow: 0 0 24px 11px rgba(36,39,47,0.35);
+    //兼容谷歌和苹果
+    -webkit-box-shadow: 0 0 24px 5px rgba(36,39,47,0.35);
+    margin: 0 auto;
+    ul{
+        li{
+            height: 60px; 
+            border-bottom: 1px solid #333535;
+            line-height: 60px;
+            a{
+                color: #fff; 
+                font-size: 18px; 
+                padding-left: 40px; 
+                display: block;
+                span{
+                    font-size: 14px; 
+                    font-family: "Arial"; 
+                    color: #bbb; 
+                    display: inline-block; 
+                    margin-left: 10px;
+                }
+            }
+            a:hover{ 
+                background-color: #3a3535;
+                border-left: 3px solid #ba1937;
+                }
+        }
+        li:last-child{ 
+            border-bottom: none;
+            }
+        li:first-child a:hover{
+           border-top-left-radius: 10px;
+           border-top-right-radius: 10px;
+        }
+        li:last-child a:hover{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        
+    }
+}
